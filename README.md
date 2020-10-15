@@ -11,7 +11,7 @@ Is a wrapper over phpWord (https://phpword.readthedocs.io)
 
 ## General usage example
 ```php
-$rep = new DocTemplate('Sample_40.docx');
+$rep = new DocTemplate('Sample.docx');
 
 $rep->values(['title' => 'Billy', 'inline' => 'Inline Bill!!!']);
 
