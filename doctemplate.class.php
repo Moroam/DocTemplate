@@ -65,7 +65,7 @@ class DocTemplate {
   }
 
   /**
-   * Recalc cells width for table from $options
+   * Recalc cells width for table from $options => the cell width is calculated in proportion to the full width of the table
    */
   protected function recalc_width(array $options, int $cols){
     if(count($options['width'])==0){
@@ -77,7 +77,7 @@ class DocTemplate {
       if($s == 0){
         return array_fill(0, $cols, (int)($options['tabWidth'] / $cols));
       }
-      return array_map(fn($x)=>$x==0?1:(int)($options['tabWidth']*$x/$s), $arr); // 0 - invalid width for cell is
+      return array_map(fn($x)=>$x==0?1:(int)($options['tabWidth']*$x/$s), $arr); // 0 - invalid width for cell
     }
   }
 
@@ -117,7 +117,7 @@ class DocTemplate {
    *    array  width    => cells width
    *    string caption => table caption
    *    int    fontSize   => default font size for table
-   *    int    tabWidth   => default = tabStyle['width'] (100% page width - margin)
+   *    int    tabWidth   => default = tabStyle['width'] (100% page width - margin) => in twips
    *    array  columns  => format for cells, may be set for individual cell column_number =>
    *             [
    *              'valign', 'bgColor', #### CELL STYLE
