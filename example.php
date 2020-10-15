@@ -7,7 +7,7 @@ require '/vendor/autoload.php';
 
 include_once 'doctemplate.class.php';
 
-$rep = new DocTemplate('Sample_40.docx');
+$rep = new DocTemplate('Sample.docx');
 
 $rep->values(['title' => 'Billy', 'inline' => 'Inline Bill!!!']);
 
