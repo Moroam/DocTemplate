@@ -22,7 +22,7 @@ $rep->blocks('list', [['blink' => 'More more'], ['blink' => 'Gore Bore'], ['blin
 $arr = [['cell A1', 'cell A2', 'cell A3'],['cell B1', 'cell B2', 'cell B3']];
 $options = [
   'head' => ['column 1','column 2','column 3'],
-  'width' => [2000, 4000, 4000],
+  'width' => [1, 2, 2],
   'fontSize' => 14,
   'columns' =>[
       ['color' => 'FF0000', 'bold' => 'true', 'alignment' => 'center'],
